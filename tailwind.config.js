@@ -26,6 +26,9 @@ module.exports = {
         'hero-left':
           'url(//cdn.shopify.com/s/files/1/1469/2926/products/Rectangle2_1_1200x.progressive.jpg?v=1598904519)',
       },
+      padding: {
+        18: '70px',
+      },
     },
   },
   variants: {

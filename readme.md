@@ -4,10 +4,13 @@ This project was built using TailwindCSS. To learn more about tailwind css, read
 
 Check [Live Demo](https://chili-tech.netlify.app/#)
 ### How to modify CSS
-Orginal css file is located in `tailwind/css`.
+Source css file is located in `tailwind/css`. 
+Compiled css file is `styles.css`
 
 ### How to build CSS
 ```
 npm run build-css
 ```
 
+### How to configure theme settings
+Modify configurations in `tailwind.config.js`
