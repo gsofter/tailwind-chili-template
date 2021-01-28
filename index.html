@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <!-- Begin header -->
+    <header>
+      <div class="flex flex-row justify-center items-center bg-top">
+        <div class="container flex justify-center items-center py-1">
+          <p class="text-gray-200">
+            Need help while you shop <a href="#"> Call us </a>
+          </p>
+        </div>
+      </div>
+      <!-- Mobile Nav -->
+      <div
+        class="w-full lg:hidden flex items-center justify-center border-b border-solid border-b-black border-opacity-30"
+      >
+        <div
+          class="w-full flex flex-row justify-between items-center px-4 py-2"
+        >
+          <div class="w-1/3">
+            <a href="#">
+              <span> <i class="fa fa-bars"> </i> </span>
+            </a>
+          </div>
+          <div class="nav-logo flex items-center justify-center w-1/3 h-full">
+            <a href="/" class="mx-0 my-auto">
+              <img
+                src="//cdn.shopify.com/s/files/1/1469/2926/t/203/assets/chili-logo-primary.svg?v=3229009722983945794"
+                alt="chilisleep brand logo"
+                class="w-32"
+              />
+            </a>
+          </div>
+          <div class="w-1/3 text-right">
+            <a href="#">
+              <span> <i class="fa fa-shopping-cart"> </i> </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Begin Navbar -->
+      <nav
+        class="hidden lg:flex flex-row justify-center items-center bg-white border-t border-b border-gray-300 border-solid"
+      >
+        <div class="container flex justify-between items-center py-1">
+          <!-- Logo -->
+          <div class="nav-logo w-1/3 lg:w-1/4 lg:mr-5 h-full justify-center">
+            <a href="/" class="mx-0 my-auto w-32">
+              <img
+                src="//cdn.shopify.com/s/files/1/1469/2926/t/203/assets/chili-logo-primary.svg?v=3229009722983945794"
+                alt="chilisleep brand logo"
+                class="w-32"
+              />
+            </a>
+          </div>
+          <!-- Menu Items -->
+          <ul
+            class="flex flex-row items-center uppercase text-menu font-bold text-sm"
+          >
+            <li class="px-2">
+              <a href="#" class="hover:text-opacity-70"> Shop </a>
+            </li>
+            <li class="px-2">
+              <a href="#" class="hover:text-opacity-70"> Learn </a>
+            </li>
+            <li class="px-2">
+              <a href="#" class="hover:text-opacity-70"> Blog </a>
+            </li>
+            <li class="px-2">
+              <a href="#" class="hover:text-opacity-70"> Support </a>
+            </li>
+            <li class="px-2">
+              <a href="#" class="hover:text-opacity-70"> Bundless </a>
+            </li>
+          </ul>
+          <!-- User Info -->
+          <div class="info w-1/3 lg:w-auto">
+            <div class="user-info">
+              <a href="#" class="text-menu uppercase font-bold"> Log IN </a>
+              &nbsp; | &nbsp;
+              <a href="#" class="text-menu uppercase font-bold">
+                Order Status
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+    </header>
+    <!-- End header -->
+    <!-- Begin Main Section -->
+    <main>
+      <div class="flex flex-col lg:hidden">
+        <h1
+          class="mb-0 text-gray-900 text-3xl lg:text-2xl xl:text-4xl leading-tight text-left"
+        >
+          chiliPAD Sleep System with Chili Cool Mesh™
+        </h1>
+        <div
+          class="w-full text-3xl lg:text-2xl xl:text-4xl ml:mb-1 order-2 xl:order-3"
+          data-cy="details-af-price"
+        >
+          <span class="text-gray-900 inline-block pdp-price display-price"
+            >$1199</span
+          >
+        </div>
+        <div
+          class="w-full xl:w-1/4 flex inline-block order-3 mb-2 xl:mb-0 xl:order-2"
+          data-cy="pdp-reviews-af"
+        >
+          <a
+            href="#"
+            data-scroll-to="#product-review-section-anchor"
+            class="text-blue-400 my-auto xl:ml-auto text-right"
+          >
+            <div class="avg-review-stars inline-block tracking-tighter">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <div class="text-sm inline-block">
+              <span class="num-reviews">1313</span> reviews
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-wrap pb-8">
+        <!-- Left Section -->
+        <div class="w-full lg:w-1/2 flex justify-center">
+          <div class="w-full flex justify-center items-center pt-0">
+            <img
+              class="h-auto"
+              src="//cdn.shopify.com/s/files/1/1469/2926/products/Rectangle2_1_1200x.progressive.jpg?v=1598904519"
+            />
+          </div>
+        </div>
+        <!-- Right Section -->
+        <div class="w-full lg:w-1/2 bg-secondary">
+          <div class="flex lg:hidden"></div>
+          <div class="">
+            <!--Product Info -->
+            <div class="product-info flex flex-wrap px-8 py-8">
+              <div class="w-full hidden lg:flex justify-between flex-row">
+                <div class="product-name w-full lg:w-3/4">
+                  <h1
+                    class="mb-0 text-gray-900 text-3xl lg:text-2xl xl:text-4xl leading-tight text-left"
+                  >
+                    chiliBLANKET™
+                  </h1>
+                </div>
+                <div class="w-full xl:w-1/4 flex order-3 mb-2">
+                  <a
+                    href="#"
+                    data-scroll-to="#product-review-section-anchor"
+                    class="text-blue-400 my-auto xl:ml-auto text-right"
+                  >
+                    <div class="avg-review-stars inline-block tracking-tighter">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+                    <div class="text-sm inline-block">
+                      <span class="num-reviews">38</span> reviews
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="pt-6 pb-1 text-subtitle product-details">
+                <p class="text-base">
+                  Meet chiliBLANKET™, the only weighted blanket that can also be
+                  paired with a chili control unit. This weighted blanket
+                  delivers restful and restorative sleep with the added comfort
+                  of weighted goodness.
+                </p>
+                <ul class="pt-5">
+                  <li>Extra cozy poly-blend, square-knit fleece</li>
+                  <li>15 lbs of stress-relieving, snuggling power</li>
+                  <li>Insulated tubing with clamshell connection</li>
+                  <li>
+                    Control unit sold separately; each control unit can service
+                    either <b>one</b> chiliBLANKET
+                    or&nbsp;<b>one</b>&nbsp;Chili&nbsp;Cool&nbsp;Mesh&nbsp;Pad,&nbsp;not&nbsp;both.
+                  </li>
+                  <li>
+                    Get cozy under 81in long x 45in wide (206cm x 114cm) of
+                    comfort.
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="w-full product-features flex flex-row justify-between items-center text-subtitle pt-4"
+              >
+                <div class="flex flex-row items-center">
+                  <span class="text-2xl"> <i class="fa fa-truck"></i></span>
+                  <p class="uppercase text-sm leading-4 font-medium pl-2">
+                    Free shipping <br />
+                    and returns
+                  </p>
+                </div>
+                <div class="flex flex-row items-center">
+                  <span class="text-2xl"> <i class="fa fa-truck"></i></span>
+                  <p class="uppercase text-sm leading-4 font-medium pl-2">
+                    Free shipping <br />
+                    and returns
+                  </p>
+                </div>
+                <div class="flex flex-row items-center">
+                  <span class="text-2xl"> <i class="fa fa-truck"></i></span>
+                  <p class="uppercase text-sm leading-4 font-medium pl-2">
+                    Free shipping <br />
+                    and returns
+                  </p>
+                </div>
+              </div>
+
+              <div class="w-full mt-5">
+                <p class="text-secondary">SELECT A CONFIGURATION:</p>
+                <div class="flex flex-wrap mt-5">
+                  <div
+                    class="w-full grid grid-flow-row grid-cols-1 sm:grid-cols-3 gap-4 lg:pb-6"
+                  >
+                    <div
+                      class="bg-white border-2 border-gray-300 overlap-2 p-2 lg:py-2 lg:px-1 select-none text-lg lg:text-sm cursor-pointer pdp-bed-sizes__option selected border-blue-300"
+                    >
+                      <div class="flex flex-wrap">
+                        <div class="w-full h-9 xl:h-10 mb-2 text-center">
+                          <img
+                            src="//cdn.shopify.com/s/files/1/1469/2926/t/203/assets/chiliblanket.svg?v=501123962760094529"
+                            alt="chiliBLANKET 15lb"
+                            class="m-auto max-w-full h-9 xl:h-10"
+                          />
+                        </div>
+                        <div class="mb-0 text-center w-full">
+                          <div
+                            class="text-sm lg:text-xs leading-tight mb-1 md:mb-0 text-black"
+                          >
+                            chiliBLANKET 15lb
+                          </div>
+                          <div
+                            class="text-sm mb-0 leading-tight text-black block w-full pdp-option-price"
+                          >
+                            $299
+                          </div>
+
+                          <i class="text-xxs">Control Unit Sold Separately</i>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="bg-white border-2 border-gray-300 overlap-2 p-2 lg:py-2 lg:px-1 select-none text-lg lg:text-sm cursor-pointer pdp-bed-sizes__option selected border-blue-300"
+                    >
+                      <div class="flex flex-wrap">
+                        <div class="w-full h-9 xl:h-10 mb-2 text-center">
+                          <img
+                            src="//cdn.shopify.com/s/files/1/1469/2926/t/203/assets/chiliblanket.svg?v=501123962760094529"
+                            alt="chiliBLANKET 15lb"
+                            class="m-auto max-w-full h-9 xl:h-10"
+                          />
+                        </div>
+                        <div class="mb-0 text-center w-full">
+                          <div
+                            class="text-sm lg:text-xs leading-tight mb-1 md:mb-0 text-black"
+                          >
+                            chiliBLANKET 15lb
+                          </div>
+                          <div
+                            class="text-sm mb-0 leading-tight text-black block w-full pdp-option-price"
+                          >
+                            $299
+                          </div>
+
+                          <i class="text-xxs">Control Unit Sold Separately</i>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="bg-white border-2 border-gray-300 overlap-2 p-2 lg:py-2 lg:px-1 select-none text-lg lg:text-sm cursor-pointer pdp-bed-sizes__option selected border-blue-300"
+                    >
+                      <div class="flex flex-wrap">
+                        <div class="w-full h-9 xl:h-10 mb-2 text-center">
+                          <img
+                            src="//cdn.shopify.com/s/files/1/1469/2926/t/203/assets/chiliblanket.svg?v=501123962760094529"
+                            alt="chiliBLANKET 15lb"
+                            class="m-auto max-w-full h-9 xl:h-10"
+                          />
+                        </div>
+                        <div class="mb-0 text-center w-full">
+                          <div
+                            class="text-sm lg:text-xs leading-tight mb-1 md:mb-0 text-black"
+                          >
+                            chiliBLANKET 15lb
+                          </div>
+                          <div
+                            class="text-sm mb-0 leading-tight text-black block w-full pdp-option-price"
+                          >
+                            $299
+                          </div>
+
+                          <i class="text-xxs">Control Unit Sold Separately</i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full mt-5">
+                <a
+                  class="rounded-full bg-primary text-white py-4 px-8 text-xl tracking-wider cursor-pointer hover:bg-blue-600"
+                >
+                  Add to chart
+                </a>
+              </div>
+            </div>
+            <!-- End Product Info -->
+          </div>
+        </div>
+      </div>
+      <!-- Tab View Section -->
+      <div class="w-full flex items-center justify-center" id="tab-view"></div>
+      <script type="text/babel">
+        class TabView extends React.Component {
+          constructor(props) {
+            super(props);
+            this.state = { tab: 1 };
+          }
+          render() {
+            return (
+              <div className="flex flex-col justify-center items-center container">
+                <div className="tab-header flex flex-row flex-wrap md:flex-nowrap items-center w-full">
+                  <a
+                    href="#"
+                    className={`text-base text-primary md:text-2xl hover:font-bold border-b-2 border-primary w-1/4 text-center ${
+                      this.state.tab === 1 ? 'active' : ''
+                    }`}
+                    onClick={() => this.setState({ tab: 1 })}
+                  >
+                    Inbox
+                  </a>
+                  <a
+                    href="#"
+                    className={`text-base  text-primary md:text-2xl hover:font-bold border-b-2 border-primary w-1/4 text-center ${
+                      this.state.tab === 2 ? 'active' : ''
+                    }`}
+                    onClick={() => this.setState({ tab: 2 })}
+                  >
+                    Specs
+                  </a>
+                  <a
+                    href="#"
+                    className={`text-base  text-primary md:text-2xl hover:font-bold border-b-2 border-primary w-1/4 text-center ${
+                      this.state.tab === 3 ? 'active' : ''
+                    }`}
+                    onClick={() => this.setState({ tab: 3 })}
+                  >
+                    Reviews
+                  </a>
+                  <a
+                    href="#"
+                    className={`text-base  text-primary md:text-2xl hover:font-bold border-b-2 border-primary w-1/4 text-center ${
+                      this.state.tab === 4 ? 'active' : ''
+                    }`}
+                    onClick={() => this.setState({ tab: 4 })}
+                  >
+                    Faqs
+                  </a>
+                </div>
+                <div className="tab-body py-12">
+                  <div
+                    className={`${
+                      this.state.tab === 1 ? '' : 'hidden'
+                    } text-4xl`}
+                  >
+                    This is Inbox view
+                  </div>
+                  <div
+                    className={`${
+                      this.state.tab === 2 ? '' : 'hidden'
+                    } text-4xl`}
+                  >
+                    This is Specs view
+                  </div>
+                  <div
+                    className={`${
+                      this.state.tab === 3 ? '' : 'hidden'
+                    } text-4xl`}
+                  >
+                    This is Reviews view
+                  </div>
+                  <div
+                    className={`${
+                      this.state.tab === 4 ? '' : 'hidden'
+                    } text-4xl`}
+                  >
+                    This is Faqs view
+                  </div>
+                </div>
+              </div>
+            );
+          }
+        }
+
+        ReactDOM.render(<TabView />, document.getElementById('tab-view'));
+      </script>
+    </main>
+    <!-- End Main Section -->
+
+    <!-- Begin footer Section -->
+    <footer class="bg-primary flex justify-center items-center md: py-12">
+      <div class="container flex flex-wrap lg:flex-nowrap lg:flex-row w-full items-center">
+        <div class="w-1/3 px-3">
+          <div class="w-full">
+            <img
+              src="//cdn.shopify.com/s/files/1/1469/2926/t/203/assets/chili-logo-white.svg?v=16627423672196519292"
+              alt="chilisleep brand logo"
+            />
+          </div>
+        </div>
+        <div class="w-1/3 lg:w-1/6 px-3">
+          <div class="mb-6 uppercase text-xs font-bold tracking-widest">
+            Customer Service
+          </div>
+          <div class="leading-loose text-sm font-light">
+            <a class="text-white block" href="/pages/app">Get the OOLER app</a>
+            <a class="text-white block" href="/pages/app">Get the OOLER app</a>
+            <a class="text-white block" href="/pages/app">Get the OOLER app</a>
+            <a class="text-white block" href="/pages/app">Get the OOLER app</a>
+            <a class="text-white block" href="/pages/app">Get the OOLER app</a>
+            <a class="text-white block" href="/pages/app">Get the OOLER app</a>
+          </div>
+        </div>
+        <div class="w-1/3 lg:w-1/6 px-3">
+          <div class="mb-6 uppercase text-xs font-bold tracking-widest">
+            Perks
+          </div>
+          <div class="leading-loose text-sm font-light">
+            <a class="text-white block" href="/pages/app">Get the OOLER app</a>
+            <a class="text-white block" href="/pages/app">Get the OOLER app</a>
+            <a class="text-white block" href="/pages/app">Get the OOLER app</a>
+            <a class="text-white block" href="/pages/app">Get the OOLER app</a>
+            <a class="text-white block" href="/pages/app">Get the OOLER app</a>
+            <a class="text-white block" href="/pages/app">Get the OOLER app</a>
+          </div>
+        </div>
+        <div class="hidden lg:block w-1/3 lg:w-1/6 px-3">
+          <div class="mb-6 uppercase text-xs font-bold tracking-widest">
+            Perks
+          </div>
+          <div class="leading-loose text-sm font-light">
+            <a class="text-white block" href="/pages/app">Get the OOLER app</a>
+            <a class="text-white block" href="/pages/app">Get the OOLER app</a>
+            <a class="text-white block" href="/pages/app">Get the OOLER app</a>
+            <a class="text-white block" href="/pages/app">Get the OOLER app</a>
+            <a class="text-white block" href="/pages/app">Get the OOLER app</a>
+            <a class="text-white block" href="/pages/app">Get the OOLER app</a>
+          </div>
+        </div>
+        <div class="hidden lg:block w-1/3 lg:w-1/6 px-3">
+          <div class="mb-6 uppercase text-xs font-bold tracking-widest">
+            Perks
+          </div>
+          <div class="leading-loose text-sm font-light">
+            <a class="text-white block" href="/pages/app">Get the OOLER app</a>
+            <a class="text-white block" href="/pages/app">Get the OOLER app</a>
+            <a class="text-white block" href="/pages/app">Get the OOLER app</a>
+            <a class="text-white block" href="/pages/app">Get the OOLER app</a>
+            <a class="text-white block" href="/pages/app">Get the OOLER app</a>
+            <a class="text-white block" href="/pages/app">Get the OOLER app</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

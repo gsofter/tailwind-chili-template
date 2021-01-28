@@ -1,0 +1,20 @@
+{
+  "name": "chilitech-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "postcss tailwind/styles.css -o styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.2.3",
+    "postcss-cli": "^8.3.1",
+    "postcss-import": "^14.0.0",
+    "postcss-nesting": "^7.0.1",
+    "tailwindcss": "^2.0.2"
+  }
+}
