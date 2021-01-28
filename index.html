@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title> ChiliTechnolog Theme </title>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js"></script>
@@ -202,23 +202,23 @@
                 </ul>
               </div>
               <div
-                class="w-full product-features flex flex-row justify-between items-center text-subtitle pt-4"
+                class="w-full product-features flex flex-col md:flex-row md:flex-nowrap justify-between items-center text-subtitle pt-4"
               >
-                <div class="flex flex-row items-center">
+                <div class="flex flex-row items-center w-full mt-1 md:mt-0">
                   <span class="text-2xl"> <i class="fa fa-truck"></i></span>
                   <p class="uppercase text-sm leading-4 font-medium pl-2">
                     Free shipping <br />
                     and returns
                   </p>
                 </div>
-                <div class="flex flex-row items-center">
+                <div class="flex flex-row items-center w-full mt-2 md:mt-0">
                   <span class="text-2xl"> <i class="fa fa-truck"></i></span>
                   <p class="uppercase text-sm leading-4 font-medium pl-2">
                     Free shipping <br />
                     and returns
                   </p>
                 </div>
-                <div class="flex flex-row items-center">
+                <div class="flex flex-row items-center w-full mt-2 md:mt-0">
                   <span class="text-2xl"> <i class="fa fa-truck"></i></span>
                   <p class="uppercase text-sm leading-4 font-medium pl-2">
                     Free shipping <br />
@@ -337,7 +337,14 @@
           constructor(props) {
             super(props);
             this.state = { tab: 1 };
+            this.handleTabClick = this.handleTabClick.bind(this)
           }
+
+          handleTabClick(event, val) {
+            event.preventDefault();
+            this.setState({ tab: val.tab });
+          }
+
           render() {
             return (
               <div className="flex flex-col justify-center items-center container">
@@ -347,7 +354,7 @@
                     className={`text-base text-primary md:text-2xl hover:font-bold border-b-2 border-primary w-1/4 text-center ${
                       this.state.tab === 1 ? 'active' : ''
                     }`}
-                    onClick={() => this.setState({ tab: 1 })}
+                    onClick={(e) => this.handleTabClick(e, { tab: 1 })}
                   >
                     Inbox
                   </a>
@@ -356,7 +363,7 @@
                     className={`text-base  text-primary md:text-2xl hover:font-bold border-b-2 border-primary w-1/4 text-center ${
                       this.state.tab === 2 ? 'active' : ''
                     }`}
-                    onClick={() => this.setState({ tab: 2 })}
+                    onClick={(e) => this.handleTabClick(e, { tab: 2 })}
                   >
                     Specs
                   </a>
@@ -365,7 +372,7 @@
                     className={`text-base  text-primary md:text-2xl hover:font-bold border-b-2 border-primary w-1/4 text-center ${
                       this.state.tab === 3 ? 'active' : ''
                     }`}
-                    onClick={() => this.setState({ tab: 3 })}
+                    onClick={(e) => this.handleTabClick(e, { tab: 3 })}
                   >
                     Reviews
                   </a>
@@ -374,7 +381,7 @@
                     className={`text-base  text-primary md:text-2xl hover:font-bold border-b-2 border-primary w-1/4 text-center ${
                       this.state.tab === 4 ? 'active' : ''
                     }`}
-                    onClick={() => this.setState({ tab: 4 })}
+                    onClick={(e) => this.handleTabClick(e, { tab: 4 })}
                   >
                     Faqs
                   </a>
